@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { BtnHeader } from './styles';
 
-export default function Button({ children, link, color, bgcolor, bgcolorHover, fontSize, width }) {
+export default function Button({ children, link, color, bgcolor, bgcolorHover, fontSize, width, padding }) {
   return (
     <Link to={ link }>
       <BtnHeader 
@@ -11,6 +11,7 @@ export default function Button({ children, link, color, bgcolor, bgcolorHover, f
         color={ color }
         bgcolor={ bgcolor }
         fontSize={ fontSize }
+        padding={ padding }
         bgcolorHover={ bgcolorHover }
       >
         { children }

@@ -1,4 +1,4 @@
-import { Nav, List, ItemList, Logo, BtnHeader } from '../../components/Header/styles';
+import { Nav, List, ItemList, Logo } from '../../components/Header/styles';
 
 import Button from '../../components/Button';
 
@@ -14,6 +14,7 @@ export default function Header() {
             link="/login"
             fontSize="1em"
             color="#FFF"
+            padding="12px 30px"
             bgcolor="#FF0000"
             bgcolorHover="#c90000"
           >

@@ -14,5 +14,4 @@ export const SessionOffering = styled.section`
 
 export const ArticleOffering = styled.article`
   align-self: center;
-  margin-bottom: 50px;
 `;

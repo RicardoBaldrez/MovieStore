@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const ContainerMain = styled.div`
   height: 100vh;
   display: flex;
   color: #FFF;
-  background-size: coverw;
+  background-size: cover;
   justify-content: center;
   background-position: center;
   background-attachment: fixed;
@@ -17,5 +17,6 @@ export const Container = styled.div`
 
   .body {
     font-size: 1.8em;
+    margin-bottom: 50px;
   }
 `;
