@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 
 import { BtnHeader } from './styles';
 
+import { ChangingComponentContext } from '../../common/context/ChangingComponent';
+
 export default function Button({ children, link, color, bgcolor, bgcolorHover, fontSize, width, padding }) {
+  const { setComponent } = useContext(ChangingComponentContext);
+
   return (
     <Link to={ link }>
       <BtnHeader 
@@ -13,6 +17,7 @@ export default function Button({ children, link, color, bgcolor, bgcolorHover, f
         fontSize={ fontSize }
         padding={ padding }
         bgcolorHover={ bgcolorHover }
+        onClick={() => setComponent('login')}
       >
         { children }
       </BtnHeader>
