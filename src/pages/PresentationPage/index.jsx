@@ -5,24 +5,37 @@ import 'animate.css';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
+import ContainerPresentationLogin from '../../components/ContainerPresentationLogin';
 import ContainerCentralDialog from '../../components/ContainerCentralDialog';
 import PresentationPageSession from '../../components/PresentationPageSession';
-
-import { ContainerMain } from './styles';
 import { redPrimary, redHoverPrimary } from '../../components/variables';
 
+import { makeStyles } from '@material-ui/core/styles';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
 
+const useStyles = makeStyles({
+  header: {
+    fontSize: '2.8em',
+    marginBottom: '20px',
+  },
+  body: {
+    fontSize: '1.8em',
+    marginBottom: '50px',
+  }
+});
+
 export default function PresentationPage() {
+  const classes = useStyles();
+
   return (
     <>
-      <ContainerMain>
+      <ContainerPresentationLogin>
         <Header />
         <ContainerCentralDialog>
-          <header className="header">
+          <header className={classes.header}>
             <h1>Filmes, séries e muito mais. <br />Sem limites ...</h1>
           </header>
-          <p className="body">Assista onde quiser. Quando quiser.</p>
+          <p className={classes.body}>Assista onde quiser. Quando quiser.</p>
           <Button
             link="/login"
             width="100%"
@@ -38,7 +51,7 @@ export default function PresentationPage() {
         <div style={{ flexBasis: '100%', position: 'absolute', bottom: '30px' }}>
           <ArrowDownward fontSize="large" className="animate__animated animate__rubberBand animate__infinite" />
         </div>
-      </ContainerMain>
+      </ContainerPresentationLogin>
       <PresentationPageSession />
       <Footer />
     </>
