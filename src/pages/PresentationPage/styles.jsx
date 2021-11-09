@@ -4,6 +4,7 @@ export const ContainerMain = styled.div`
   height: 100vh;
   display: flex;
   color: #FFF;
+  flex-wrap: wrap;
   background-size: cover;
   justify-content: center;
   background-position: center;

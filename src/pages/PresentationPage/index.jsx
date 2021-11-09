@@ -1,5 +1,7 @@
 import React from 'react'
 
+import 'animate.css';
+
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
@@ -9,6 +11,7 @@ import PresentationPageSession from '../../components/PresentationPageSession';
 import { ContainerMain } from './styles';
 import { redPrimary, redHoverPrimary } from '../../components/variables';
 
+import ArrowDownward from '@material-ui/icons/ArrowDownward';
 
 export default function PresentationPage() {
   return (
@@ -19,7 +22,7 @@ export default function PresentationPage() {
           <header className="header">
             <h1>Filmes, séries e muito mais. <br />Sem limites ...</h1>
           </header>
-          <p className="body">Assista onde quiser. Cancele quando quiser.</p>
+          <p className="body">Assista onde quiser. Quando quiser.</p>
           <Button
             link="/login"
             width="100%"
@@ -32,6 +35,9 @@ export default function PresentationPage() {
             Vamos lá
           </Button>
         </ContainerCentralDialog>
+        <div style={{ flexBasis: '100%', position: 'absolute', bottom: '30px' }}>
+          <ArrowDownward fontSize="large" className="animate__animated animate__rubberBand animate__infinite" />
+        </div>
       </ContainerMain>
       <PresentationPageSession />
       <Footer />

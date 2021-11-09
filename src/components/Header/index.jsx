@@ -7,7 +7,11 @@ export default function Header() {
     <Nav>
       <List>
         <ItemList>
-          <Logo src="https://media.giphy.com/media/gLRO6wuMJGVBDsybOw/giphy.gif" alt="Logo" />
+          <Logo 
+            alt="Logo"
+            className="animate__animated animate__zoomIn"
+            src="https://media.giphy.com/media/gLRO6wuMJGVBDsybOw/giphy.gif"
+          />
         </ItemList>
         <ItemList>
           <Button 
