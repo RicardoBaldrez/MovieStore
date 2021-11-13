@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -22,10 +22,21 @@ const useStyles = makeStyles({
     fontSize: '1.8em',
     marginBottom: '50px',
   },
+  containerArrowDownward: {
+    bottom: '30px',
+    flexBasis: '100%',
+    position: 'absolute',
+    '&:hover': {
+      cursor: 'pointer'
+    }
+  }
 });
 
 export default function PresentationPage() {
   const classes = useStyles();
+  
+  const myRef = useRef(null);
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
   return (
     <>
@@ -48,10 +59,11 @@ export default function PresentationPage() {
             Vamos lá
           </Button>
         </ContainerCentralDialog>
-        <div style={{ flexBasis: '100%', position: 'absolute', bottom: '30px' }}>
+        <div className={classes.containerArrowDownward} onClick={() => scrollToRef(myRef)}>
           <ArrowDownward fontSize="large" className="animate__animated animate__rubberBand animate__infinite" />
         </div>
       </ContainerPresentation>
+      <span ref={myRef}></span>
       <PresentationPageSession />
       <Footer />
     </>
