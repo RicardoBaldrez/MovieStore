@@ -1,6 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 
 import 'animate.css';
+
+import { 
+  SectionLogin,
+  HeaderSectionLogin,
+  TitleHeaderSectionLogin,
+} from './styles';
 
 import { ChangingComponentContext } from '../../common/context/ChangingComponent';
 
@@ -16,6 +22,7 @@ import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import ArrowBack from '@material-ui/icons/ArrowBack';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles({
   header: {
@@ -25,11 +32,24 @@ const useStyles = makeStyles({
   body: {
     fontSize: '1.8em',
     marginBottom: '50px',
-  }
+  },
+  input: {
+    borderRadius: '5px',
+    marginBottom: '15px',
+    backgroundColor: '#FFF',
+  },
 });
 
 export default function PresentationPage() {
   const classes = useStyles();
+
+  const [name, setName] = useState('');
+  const [lastName, setlastName] = useState('');
+  const [email, setEmail] = useState('');
+
+  console.log(name);
+  console.log(lastName);
+  console.log(email);
 
   const { component, setComponent } = useContext(ChangingComponentContext);
 
@@ -42,11 +62,31 @@ export default function PresentationPage() {
             <>
               <IconButton
                 color="primary"
-                style={{ color: 'white' }}
+                style={{ color: 'white', display: 'flex' }}
                 onClick={() => setComponent('presentation')}
               >
                 <ArrowBack />
               </IconButton>
+              <SectionLogin>
+                <HeaderSectionLogin>
+                  <TitleHeaderSectionLogin>Entrar</TitleHeaderSectionLogin>
+                </HeaderSectionLogin>
+                  <TextField id="filled-basic" label="Nome" variant="filled" className={classes.input} onChange={(e) => setName(e.target.value)} />
+                  <TextField id="filled-basic" label="SobreNome" variant="filled" className={classes.input} onChange={(e) => setlastName(e.target.value)} />
+                  <TextField id="filled-basic" label="Email" variant="filled" className={classes.input} onChange={(e) => setEmail(e.target.value)} />
+                <Button
+                  link="/catalog"
+                  width="100%"
+                  color="#FFF"
+                  fontSize="1em"
+                  padding="15px 0"
+                  margin="40px 0 0"
+                  bgcolor={redPrimary}
+                  bgcolorHover={redHoverPrimary}
+                >
+                  Entrar
+                </Button>
+              </SectionLogin>
             </>
           ) : (
            <>

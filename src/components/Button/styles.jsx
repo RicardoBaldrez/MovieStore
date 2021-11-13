@@ -8,6 +8,7 @@ export const BtnHeader = styled.button`
   transition: all .3s;
   box-shadow: 5px 5px 10px #000;
   color: ${(props) => props.color};
+  margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
   font-size: ${(props) => props.fontSize};
   background-color: ${(props) => props.bgcolor};

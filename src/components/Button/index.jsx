@@ -5,7 +5,7 @@ import { BtnHeader } from './styles';
 
 import { ChangingComponentContext } from '../../common/context/ChangingComponent';
 
-export default function Button({ children, link, color, bgcolor, bgcolorHover, fontSize, width, padding }) {
+export default function Button({ children, link, color, bgcolor, bgcolorHover, fontSize, width, padding, margin }) {
   const { setComponent } = useContext(ChangingComponentContext);
 
   return (
@@ -13,9 +13,10 @@ export default function Button({ children, link, color, bgcolor, bgcolorHover, f
       <BtnHeader 
         width={width}
         color={ color }
+        margin={ margin }
         bgcolor={ bgcolor }
-        fontSize={ fontSize }
         padding={ padding }
+        fontSize={ fontSize }
         bgcolorHover={ bgcolorHover }
         onClick={() => setComponent('login')}
       >
