@@ -11,7 +11,7 @@ export default function Button({ children, link, color, bgcolor, bgcolorHover, f
   return (
     <Link to={ link }>
       <BtnHeader 
-        width={width}
+        width={ width }
         color={ color }
         margin={ margin }
         bgcolor={ bgcolor }

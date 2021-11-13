@@ -1,18 +1,25 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { ChangingComponentProvider } from './common/context/ChangingComponent';
+import { UserContextProvider } from './common/context/UserContext' 
 
-import PresentationPage from './pages/PresentationPage';
+import PresentationLoginPage from './pages/PresentationLoginPage';
+import MoviesPage from './pages/MoviesPage';
 
 export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <ChangingComponentProvider>
-          <Route path="/" exact>
-            <PresentationPage />
+        <UserContextProvider>
+          <ChangingComponentProvider>
+            <Route path="/" exact>
+              <PresentationLoginPage />
+            </Route>
+          </ChangingComponentProvider>
+          <Route path="/catalog" exact>
+            <MoviesPage />
           </Route>
-        </ChangingComponentProvider>
+        </UserContextProvider>
       </Switch>
     </BrowserRouter>
   );

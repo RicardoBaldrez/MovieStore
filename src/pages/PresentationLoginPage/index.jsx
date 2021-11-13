@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 
 import 'animate.css';
 
@@ -9,6 +9,7 @@ import {
 } from './styles';
 
 import { ChangingComponentContext } from '../../common/context/ChangingComponent';
+import { UserContext } from '../../common/context/UserContext';
 
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
@@ -44,6 +45,7 @@ export default function PresentationPage() {
   const classes = useStyles();
 
   const { component, setComponent } = useContext(ChangingComponentContext);
+  const { setName } = useContext(UserContext);
 
   return (
     <>
@@ -54,16 +56,23 @@ export default function PresentationPage() {
             <>
               <IconButton
                 color="primary"
-                style={{ color: 'white', display: 'flex' }}
+                style={{ color: 'white', display: 'flex', justifyContent: 'center' }}
                 onClick={() => setComponent('presentation')}
               >
-                <ArrowBack />
+                <ArrowBack style={{ height: '45px' }} />
               </IconButton>
+              
               <SectionLogin>
                 <HeaderSectionLogin>
                   <TitleHeaderSectionLogin>Login</TitleHeaderSectionLogin>
                 </HeaderSectionLogin>
-                  <TextField id="filled-basic" label="Nome" variant="filled" className={classes.input} />
+                  <TextField 
+                    id="filled-basic"
+                    label="Nome"
+                    variant="filled"
+                    className={classes.input}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                   <TextField id="filled-basic" label="SobreNome" variant="filled" className={classes.input} />
                   <TextField id="filled-basic" label="Email" variant="filled" className={classes.input} />
                 <Button
