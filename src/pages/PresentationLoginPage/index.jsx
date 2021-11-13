@@ -1,13 +1,5 @@
 import React, { useContext } from 'react'
 
-import 'animate.css';
-
-import { 
-  SectionLogin,
-  HeaderSectionLogin,
-  TitleHeaderSectionLogin,
-} from './styles';
-
 import { ChangingComponentContext } from '../../common/context/ChangingComponent';
 import { UserContext } from '../../common/context/UserContext';
 
@@ -24,6 +16,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import TextField from '@material-ui/core/TextField';
+
+import { 
+  SectionLogin,
+  HeaderSectionLogin,
+  TitleHeaderSectionLogin,
+} from './styles';
+
+import 'animate.css';
 
 const useStyles = makeStyles({
   header: {
@@ -45,7 +45,7 @@ export default function PresentationPage() {
   const classes = useStyles();
 
   const { component, setComponent } = useContext(ChangingComponentContext);
-  const { setName } = useContext(UserContext);
+  const { setName, setBalance } = useContext(UserContext);
 
   return (
     <>
@@ -55,16 +55,14 @@ export default function PresentationPage() {
           {component === 'login' ? (
             <>
               <IconButton
-                color="primary"
-                style={{ color: 'white', display: 'flex', justifyContent: 'center' }}
+                style={{ color: 'white', display: 'flex' }}
                 onClick={() => setComponent('presentation')}
               >
-                <ArrowBack style={{ height: '45px' }} />
+                <ArrowBack />
               </IconButton>
-              
               <SectionLogin>
                 <HeaderSectionLogin>
-                  <TitleHeaderSectionLogin>Login</TitleHeaderSectionLogin>
+                  <TitleHeaderSectionLogin>Insira Nome e Saldo</TitleHeaderSectionLogin>
                 </HeaderSectionLogin>
                   <TextField 
                     id="filled-basic"
@@ -73,8 +71,13 @@ export default function PresentationPage() {
                     className={classes.input}
                     onChange={(e) => setName(e.target.value)}
                   />
-                  <TextField id="filled-basic" label="SobreNome" variant="filled" className={classes.input} />
-                  <TextField id="filled-basic" label="Email" variant="filled" className={classes.input} />
+                  <TextField
+                    id="filled-basic"
+                    label="Saldo"
+                    variant="filled"
+                    className={classes.input}
+                    onChange={(e) => setBalance(e.target.value)}
+                  />
                 <Button
                   link="/catalog"
                   width="100%"
@@ -85,7 +88,7 @@ export default function PresentationPage() {
                   bgcolor={redPrimary}
                   bgcolorHover={redHoverPrimary}
                 >
-                  Entrar
+                  Avançar
                 </Button>
               </SectionLogin>
             </>

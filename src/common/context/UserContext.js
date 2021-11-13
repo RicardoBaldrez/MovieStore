@@ -5,11 +5,10 @@ UserContext.displayName = 'UserContext';
 
 export const UserContextProvider = ({ children }) => {
   const [name, setName] = useState('');
-  const [lastName, setlastName] = useState('');
-  const [email, setEmail] = useState('');
+  const [balance, setBalance] = useState('');
 
   return(
-    <UserContext.Provider value={{ name, setName, lastName, setlastName, email, setEmail }}>
+    <UserContext.Provider value={{ name, setName, balance, setBalance }}>
       { children }
     </UserContext.Provider>
   );
