@@ -1,13 +1,12 @@
-import React, { useContext } from 'react'
-
-import { Nav, List, ItemList, Logo } from '../../components/Header/styles';
+import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 import Button from '../../components/Button';
 
-import { ChangingComponentContext } from '../../common/context/ChangingComponent';
+import { Nav, List, ItemList, Logo } from '../../components/Header/styles';
 
 export default function Header() {
-  const { component } = useContext(ChangingComponentContext);
+  const location = useLocation();
 
   return (
     <Nav>
@@ -19,10 +18,10 @@ export default function Header() {
             src="https://media.giphy.com/media/gLRO6wuMJGVBDsybOw/giphy.gif"
           />
         </ItemList>
-        {component === 'presentation' && (
+        {location.pathname !== '/login' && (
           <ItemList>
             <Button 
-              link=""
+              link="/login"
               fontSize="1em"
               color="#FFF"
               padding="12px 30px"
