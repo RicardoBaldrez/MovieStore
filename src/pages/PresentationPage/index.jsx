@@ -43,14 +43,6 @@ const useStyles = makeStyles({
 export default function PresentationPage() {
   const classes = useStyles();
 
-  const [name, setName] = useState('');
-  const [lastName, setlastName] = useState('');
-  const [email, setEmail] = useState('');
-
-  console.log(name);
-  console.log(lastName);
-  console.log(email);
-
   const { component, setComponent } = useContext(ChangingComponentContext);
 
   return (
@@ -69,11 +61,11 @@ export default function PresentationPage() {
               </IconButton>
               <SectionLogin>
                 <HeaderSectionLogin>
-                  <TitleHeaderSectionLogin>Entrar</TitleHeaderSectionLogin>
+                  <TitleHeaderSectionLogin>Login</TitleHeaderSectionLogin>
                 </HeaderSectionLogin>
-                  <TextField id="filled-basic" label="Nome" variant="filled" className={classes.input} onChange={(e) => setName(e.target.value)} />
-                  <TextField id="filled-basic" label="SobreNome" variant="filled" className={classes.input} onChange={(e) => setlastName(e.target.value)} />
-                  <TextField id="filled-basic" label="Email" variant="filled" className={classes.input} onChange={(e) => setEmail(e.target.value)} />
+                  <TextField id="filled-basic" label="Nome" variant="filled" className={classes.input} />
+                  <TextField id="filled-basic" label="SobreNome" variant="filled" className={classes.input} />
+                  <TextField id="filled-basic" label="Email" variant="filled" className={classes.input} />
                 <Button
                   link="/catalog"
                   width="100%"

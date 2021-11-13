@@ -2,7 +2,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { ChangingComponentProvider } from './common/context/ChangingComponent';
 
-// import Login from './pages/Login';
 import PresentationPage from './pages/PresentationPage';
 
 export default function Routes() {
