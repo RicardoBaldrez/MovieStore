@@ -19,4 +19,9 @@ export const BtnHeader = styled.button`
     box-shadow: 0px 0px 5px #000;
     background-color: ${(props) => props.bgcolorHover};
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #040404ab;
+  }
 `;

@@ -13,11 +13,10 @@ import Header from '../../components/Header';
 import Button from '../../components/Button';
 import ContainerCentralDialog from '../../components/ContainerCentralDialog';
 import ContainerPresentation from '../../components/ContainerPresentation';
+import { redPrimary, redHoverPrimary } from '../../components/variables';
 
 import ArrowBack from '@material-ui/icons/ArrowBack';
 import { makeStyles, TextField, IconButton } from '@material-ui/core';
-
-import { redPrimary, redHoverPrimary } from '../../components/variables';
 
 const useStyles = makeStyles({
   iconButton: {
@@ -36,7 +35,7 @@ export default function Login() {
   const classes = useStyles();
   const history = useHistory();
 
-  const { setName, setBalance } = useContext(UserContext);
+  const { name, setName, setBalance } = useContext(UserContext);
 
   return(
     <>
@@ -75,6 +74,7 @@ export default function Login() {
               padding="15px 0"
               margin="40px 0 0"
               bgcolor={redPrimary}
+              disabled={name.length < 4}
               bgcolorHover={redHoverPrimary}
             >
               Avançar

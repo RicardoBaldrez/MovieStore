@@ -53,6 +53,7 @@ export default function PresentationPage() {
             color="#FFF"
             fontSize="1.5em"
             padding="15px 0"
+            disabled={false}
             bgcolor={redPrimary}
             bgcolorHover={redHoverPrimary}
           >
