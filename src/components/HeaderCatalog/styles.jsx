@@ -49,7 +49,7 @@ export const LinkItem = styled.a`
 `;
 
 export const InfoUser = styled.span`
-  color: gray;
+  color: #FFF;
   padding: 5px;
   text-shadow: 2px 2px 2px #000;
   font-size: 1.2em;

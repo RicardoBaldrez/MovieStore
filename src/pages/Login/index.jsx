@@ -37,6 +37,12 @@ export default function Login() {
 
   const { name, setName, setBalance } = useContext(UserContext);
 
+  const onHandleEnter = (keyCode) =>  {
+    if(keyCode === 13) {
+      history.push('/catalog');
+    }
+  }
+
   return(
     <>
       <ContainerPresentation>
@@ -64,6 +70,7 @@ export default function Login() {
                 label="Saldo"
                 variant="filled"
                 className={classes.input}
+                onKeyUp={(e) => onHandleEnter(e.keyCode)}
                 onChange={(e) => setBalance(e.target.value)}
               />
             <Button
