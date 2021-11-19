@@ -9,7 +9,6 @@ import PresentationPageSession from '../../components/PresentationPageSession';
 import { redPrimary, redHoverPrimary } from '../../components/variables';
 
 import { makeStyles } from '@material-ui/core/styles';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
 
 import 'animate.css';
 
@@ -35,7 +34,7 @@ const useStyles = makeStyles({
 export default function PresentationPage() {
   const classes = useStyles();
   
-  const myRef = useRef(null);
+  const presentationSession = useRef(null);
   const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
   return (
@@ -60,11 +59,11 @@ export default function PresentationPage() {
             Vamos lá
           </Button>
         </ContainerCentralDialog>
-        <div className={classes.containerArrowDownward} onClick={() => scrollToRef(myRef)}>
-          <ArrowDownward fontSize="large" className="animate__animated animate__rubberBand animate__infinite" />
+        <div className={classes.containerArrowDownward} onClick={() => scrollToRef(presentationSession)}>
+          <img src="https://media.giphy.com/media/UrzWDQ3VTiDU84R5dx/giphy.gif" width="80" height="50" alt="" />
         </div>
       </ContainerPresentation>
-      <span ref={myRef}></span>
+      <span ref={presentationSession}></span>
       <PresentationPageSession />
       <Footer />
     </>
