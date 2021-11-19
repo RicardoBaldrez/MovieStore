@@ -44,7 +44,7 @@ export default function Login() {
         <ContainerCentralDialog>
           <IconButton
             className={classes.iconButton}
-            onClick={() => history.goBack()}
+            onClick={() => history.push('/')}
           >
             <ArrowBack />
           </IconButton>

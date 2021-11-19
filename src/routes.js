@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { UserContextProvider } from './common/context/UserContext' 
 
 import Login from './pages/Login';
-import Movies from './pages/Movies';
+import CatalogProducts from './pages/CatalogProducts';
 import Presentation from './pages/Presentation';
 
 export default function Routes() {
@@ -18,7 +18,7 @@ export default function Routes() {
             <Login />
           </Route>
           <Route path="/catalog">
-            <Movies />
+            <CatalogProducts />
           </Route>
         </UserContextProvider>
       </Switch>
