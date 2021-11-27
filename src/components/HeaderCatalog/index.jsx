@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import {
   Logo,
   List,
@@ -24,10 +23,10 @@ export default function HeaderCatalog() {
         </ItemList>
         <NavHeader>
           <ItemList>
-            <LinkItem>Filmes <KeyboardArrowDownIcon fontSize="small" /></LinkItem>
+            <LinkItem>Filmes</LinkItem>
           </ItemList>
           <ItemList>
-            <LinkItem>Séries <KeyboardArrowDownIcon fontSize="small" /></LinkItem>
+            <LinkItem>Séries</LinkItem>
           </ItemList>
         </NavHeader>
       </List>

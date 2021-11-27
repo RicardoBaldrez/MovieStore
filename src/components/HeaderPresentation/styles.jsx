@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-import { bgcolorTranslucentDefault } from '../variables'
-
 export const Nav = styled.nav`
-  height: 100vh;
   min-width: 100%;
   position: absolute;
-  background-color: ${bgcolorTranslucentDefault};
 `;
 
 export const List = styled.ul`
@@ -24,5 +20,6 @@ export const Logo = styled.img`
 
 export const ItemList = styled.li`
   list-style: none;
+  overflow: hidden;
 `;
 

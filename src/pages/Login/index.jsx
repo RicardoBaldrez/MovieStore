@@ -9,7 +9,7 @@ import {
   TitleHeaderSectionLogin,
 } from './styles';
 
-import Header from '../../components/Header';
+import HeaderPresentation from '../../components/HeaderPresentation';
 import Button from '../../components/Button';
 import ContainerCentralDialog from '../../components/ContainerCentralDialog';
 import ContainerPresentation from '../../components/ContainerPresentation';
@@ -46,7 +46,7 @@ export default function Login() {
   return(
     <>
       <ContainerPresentation>
-        <Header />
+        <HeaderPresentation />
         <ContainerCentralDialog>
           <IconButton
             className={classes.iconButton}

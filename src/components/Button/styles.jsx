@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
+import { slideUp } from '../../common/keyFrames';
+
 import { colorDisabled, redHoverPrimary, redPrimary, textColorPrimary } from '../variables';
 
 export const BtnHeader = styled.button`
+  opacity: 0;
   border: none;
   font-weight: bold;
   border-radius: 5px;
@@ -13,6 +16,7 @@ export const BtnHeader = styled.button`
   background-color: ${redPrimary};
   margin: ${(props) => props.margin};
   padding: ${(props) => props.padding};
+  animation: ${slideUp} 1s .7s forwards;
   font-size: ${(props) => props.fontSize};
   width: ${(props) => props.width ? props.width : ''};
   

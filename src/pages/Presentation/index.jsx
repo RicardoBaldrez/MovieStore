@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 
 import Footer from '../../components/Footer';
 import Button from '../../components/Button';
-import Header from '../../components/Header';
+import HeaderPresentation from '../../components/HeaderPresentation';
 import ContainerPresentation from '../../components/ContainerPresentation';
 import ContainerCentralDialog from '../../components/ContainerCentralDialog';
 import PresentationPageSession from '../../components/PresentationPageSession';
@@ -10,17 +10,9 @@ import { redPrimary, redHoverPrimary } from '../../components/variables';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import 'animate.css';
+import { Header, Paragraph } from './styles';
 
 const useStyles = makeStyles({
-  header: {
-    fontSize: '2.8em',
-    marginBottom: '20px',
-  },
-  body: {
-    fontSize: '1.8em',
-    marginBottom: '50px',
-  },
   containerArrowDownward: {
     bottom: '30px',
     flexBasis: '100%',
@@ -28,7 +20,7 @@ const useStyles = makeStyles({
     '&:hover': {
       cursor: 'pointer'
     }
-  }
+  },
 });
 
 export default function PresentationPage() {
@@ -40,12 +32,12 @@ export default function PresentationPage() {
   return (
     <>
       <ContainerPresentation>
-        <Header />
+        <HeaderPresentation />
         <ContainerCentralDialog>
-          <header className={classes.header}>
+          <Header>
             <h1>Filmes, séries e muito mais. <br />Sem limites ...</h1>
-          </header>
-          <p className={classes.body}>Assista onde quiser. Quando quiser.</p>
+          </Header>
+          <Paragraph>Assista onde quiser. Quando quiser.</Paragraph>
           <Button
             link="/login"
             width="100%"

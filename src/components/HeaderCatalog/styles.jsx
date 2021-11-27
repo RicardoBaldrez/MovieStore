@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import { bgcolorTranslucentDefault, textColorPrimary } from '../variables.jsx';
 
@@ -28,23 +28,50 @@ export const List = styled.ul`
 `;
 
 export const ItemList = styled.li`
-  padding: 5px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
 `;
 
+const increasingEdge = keyframes`
+  from {
+    width: 0;
+  } 
+  to {
+    width: 100%;
+  }
+`;
+const decreasingEdge = keyframes`
+  from {
+    width: 100%;
+  } 
+  to {
+    width: 0;
+    opacity: 0;
+  }
+`;
+
 export const LinkItem = styled.a`
   display: flex;
+  position: relative;
   align-items: center;
   color: gray;
-  padding: 7px 10px;
+  padding: 5px 8px;
   font-weight: bold;
-  transition: all .3s;
-  border-radius: 3px;
   &:hover {
     cursor: pointer;
-    color: ${textColorPrimary};
-    background-color: #6a6a6a;
+  }
+  &:before {
+    content: '';
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: ${decreasingEdge} .5s both;
+  }
+  &:hover::before {
+    opacity: 1;
+    animation: ${increasingEdge} .5s both;
   }
 `;
 
