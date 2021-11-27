@@ -20,13 +20,25 @@ import { makeStyles, TextField, IconButton } from '@material-ui/core';
 
 const useStyles = makeStyles({
   iconButton: {
+    opacity: 0,
     color: 'white',
     display: 'flex',
+    animation: '$slideUp 1s forwards'
   },
   input: {
     borderRadius: '5px',
     marginBottom: '15px',
     backgroundColor: '#FFF',
+  },
+  '@keyframes slideUp': {
+    '0%': {
+      opacity: 0,
+      transform: 'translateY(200%)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateY(0)',
+    }
   },
 });
 
@@ -58,34 +70,35 @@ export default function Login() {
             <HeaderSectionLogin>
               <TitleHeaderSectionLogin>Insira Nome e Saldo</TitleHeaderSectionLogin>
             </HeaderSectionLogin>
-              <TextField 
-                id="filled-basic"
-                label="Nome"
-                variant="filled"
-                className={classes.input}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <TextField
-                id="filled-basic"
-                label="Saldo"
-                variant="filled"
-                className={classes.input}
-                onKeyUp={(e) => onHandleEnter(e.keyCode)}
-                onChange={(e) => setBalance(e.target.value)}
-              />
-            <Button
-              link="/catalog"
-              width="100%"
-              color="#FFF"
-              fontSize="1em"
-              padding="15px 0"
-              margin="40px 0 0"
-              bgcolor={redPrimary}
-              disabled={name.length < 4}
-              bgcolorHover={redHoverPrimary}
-            >
-              Avançar
-            </Button>
+            <TextField 
+              id="filled-basic"
+              label="Nome"
+              variant="filled"
+              className={classes.input}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <TextField
+              id="filled-basic"
+              label="Saldo"
+              variant="filled"
+              className={classes.input}
+              onKeyUp={(e) => onHandleEnter(e.keyCode)}
+              onChange={(e) => setBalance(e.target.value)}
+            />
+            <div style={{ overflowY: 'hidden' }}>
+              <Button
+                link="/catalog"
+                width="100%"
+                color="#FFF"
+                fontSize="1em"
+                padding="15px 0"
+                bgcolor={redPrimary}
+                disabled={name.length < 4}
+                bgcolorHover={redHoverPrimary}
+              >
+                Avançar
+              </Button>
+            </div>
           </SectionLogin>
         </ContainerCentralDialog>
       </ContainerPresentation>
