@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     opacity: 0,
     color: 'white',
     display: 'flex',
-    animation: '$slideUp 1s forwards'
+    animation: '$slideUp 1.2s forwards'
   },
   input: {
     borderRadius: '5px',

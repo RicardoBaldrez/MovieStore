@@ -1,0 +1,57 @@
+{
+  "categorys": [
+    {
+      "id": "films",
+      "name": "films",
+      "subCategories": ["Ação", "Comédia", "Terror", "Romance", "Suspense"]
+    },
+    {
+      "id": "series",
+      "name": "series",
+      "subCategories": ["Ação", "Comédia", "Terror", "Romance", "Suspense"]
+    }
+  ],
+  "allProducts": [
+    {
+      "id": 1,
+      "category": "films",
+      "subCategory": "Ação",
+      "title": "Corações de Ferro(Fury)",
+      "frontCover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNodMbEAj8BDLJ2mkW4LlGeKtA4IPDeyF2yUg87RuiBtEjDCTQ1xF0Ke8JK1DVIwTBpdQ&usqp=CAU",
+      "description": "Durante o final da Segunda Guerra Mundial, o sargento Don 'Wardaddy' lidera um grupo de apenas cinco soldados americanos encarregado de aniquilar os nazistas. Em um tanque de guerra Sherman, os homens enfrentam uma missão mortal. Apesar da desvantagem numérica, falta de armas e um soldado inexperiente, 'Wardaddy' e seus homens se movem em um ataque espetacular no coração da Alemanha nazista."
+    },
+    {
+      "id": 2,
+      "category": "films",
+      "title": "Atirador",
+      "subCategory": "Ação",
+      "frontCover": "https://i.pinimg.com/474x/41/20/aa/4120aa27997e0deebb07f667665291f6.jpg",
+      "description": "O atirador Marksman Bob Lee Swagger deixa o exército e desaparece sem deixar rastros. Ele volta para impedir o assassinato do Presidente dos Estados Unidos, mas é enganado e passa a ser perseguido como criminoso."
+    },
+    {
+      "id": 3,
+      "category": "films",
+      "title": "Coringa",
+      "subCategory": "Suspense",
+      "frontCover": "https://br.web.img3.acsta.net/pictures/19/04/03/18/23/2539612.jpg",
+      "description": "Isolado, intimidado e desconsiderado pela sociedade, o fracassado comediante Arthur Fleck inicia seu caminho como uma mente criminosa após assassinar três homens em pleno metrô. Sua ação inicia um movimento popular contra a elite de Gotham City, da qual Thomas Wayne é seu maior representante."
+    },
+    {
+      "id": 4,
+      "category": "films",
+      "subCategory": "Suspense",
+      "title": "Venom: Tempo de Carnificina",
+      "frontCover": "https://vivariomarrecife.com.br/wp-content/uploads/2021/10/wiseitTemp6239777747900980068-691x1024.jpg",
+      "description": "O relacionamento entre Eddie e Venom está evoluindo. Buscando a melhor forma de lidar com a inevitável simbiose, esse dois lados descobrem como viver juntos e, de alguma forma, se tornarem melhores juntos do que separados."
+    },
+    {
+      "id": 5,
+      "category": "films",
+      "title": "Alerta Vermelho",
+      "subCategory": ["Ação","Comédia"],
+      "frontCover": "https://vivariomarrecife.com.br/wp-content/uploads/2021/10/wiseitTemp6239777747900980068-691x1024.jpg",
+      "description": "O relacionamento entre Eddie e Venom está evoluindo. Buscando a melhor forma de lidar com a inevitável simbiose, esse dois lados descobrem como viver juntos e, de alguma forma, se tornarem melhores juntos do que separados."
+    }
+  ]
+}
+

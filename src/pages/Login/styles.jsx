@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { slideUp } from '../../common/keyFrames';
 
 export const SectionLogin = styled.section`
-opacity: 0;
+  opacity: 0;
   width: 400px;
   margin-top: 25px;
   border-radius: 5px;
