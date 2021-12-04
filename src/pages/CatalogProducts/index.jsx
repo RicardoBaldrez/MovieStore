@@ -4,6 +4,8 @@ import HeaderCatalog from '../../components/HeaderCatalog';
 
 import { search } from '../../api/api';
 
+import { SectionProducts, Card, CardHeader, FrontCover } from './styles';
+
 export default function MoviesPage() {
   const [products, setProducts] = useState();
   console.log(products);
@@ -15,11 +17,17 @@ export default function MoviesPage() {
   return (
     <>
       <HeaderCatalog />
-      {products?.map(({ frontCover }) => {
-        return(
-          <img src={frontCover} alt="" />
-        )
-      })}
+      <SectionProducts>
+        {products?.map(({ title, category, subCategory, frontCover, description  }) => {
+          return(
+            <Card>
+              <CardHeader>
+                <FrontCover src={frontCover} alt={`Picture film: ${title}`} />
+              </CardHeader>
+            </Card>
+          )
+        })}
+      </SectionProducts>
     </>
   );
 }

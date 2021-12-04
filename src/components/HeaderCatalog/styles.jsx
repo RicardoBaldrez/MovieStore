@@ -18,7 +18,7 @@ export const Logo = styled.h1`
   text-shadow: 3px 3px 2px black;
   align-items: center;
   margin-right: 30px;
-  font-size: 2em;
+  font-size: 2.3em;
   letter-spacing: 3px;
   color: ${textColorPrimary};
 `;

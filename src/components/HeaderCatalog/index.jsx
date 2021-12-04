@@ -19,7 +19,7 @@ export default function HeaderCatalog() {
     <HeaderMovies>
       <List>
         <ItemList>
-          <Logo>MedMax</Logo>
+          <Logo>🦄</Logo>
         </ItemList>
         <NavHeader>
           <ItemList>
