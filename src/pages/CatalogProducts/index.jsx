@@ -8,7 +8,6 @@ import { SectionProducts, Card, CardHeader, FrontCover } from './styles';
 
 export default function MoviesPage() {
   const [products, setProducts] = useState();
-  console.log(products);
   
   useEffect(() => {
     search('/allProducts', setProducts);

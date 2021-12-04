@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { increasingSize } from '../../common/keyFrames';
 
 export const SectionProducts = styled.section`
   padding: 80px 0;
@@ -12,15 +13,18 @@ export const Card = styled.article`
   position: relative;
   flex-basis: 16.66%;
   margin: 0 30px 30px 0;
-  border: 2px solid blue;
-  &:after {
-    content: "🦄";
+  border-radius: 5px;
+  overflow: hidden;
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+  &:before {
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    border: 5px solid green;
     background-color: rgba(0, 0, 0, 0.5);
   }
 `;
@@ -28,7 +32,18 @@ export const Card = styled.article`
 export const CardHeader = styled.header`
   display: flex;
   min-height: 100%;
-  border: 2px solid yellow;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    animation: ${increasingSize} 1s forwards;
+  }
 `;
 
 export const FrontCover = styled.img`
